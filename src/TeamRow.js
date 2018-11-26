@@ -5,9 +5,9 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Icon from '@material-ui/core/Icon';
 import {TeamSectionStyles} from './constants';
 import MembersPhotoList from './MembersPhotoList';
-import TeamMemberChips from './TeamMemberChips';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import {withStyles} from "@material-ui/core";
+import MemberInput from "./MemberInput";
 
 const styles = () => ({
     root: {
@@ -93,7 +93,7 @@ const TeamRow = ({team, classes}) => (
                 <div>Actions: </div>
             </div>
             <div className={classes.flexRow}>
-                <TeamMemberChips members={team.members} />
+                <MemberInput members={team.members} />
                 <div className={classes.actionsSection}>
                     <DeleteOutlinedIcon className={classes.archiveIcon}/>
                     <span className={classes.archiveText}>Archive Team</span>

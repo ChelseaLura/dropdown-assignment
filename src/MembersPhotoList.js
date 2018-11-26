@@ -12,6 +12,11 @@ const styles = () => ({
     }
 });
 
+//TODO: If built with a Flux Store:
+//    Teams and their respective members would be a property of the state that,
+//    TeamRow, MembersPhotoList, & MemberInput would both reference.
+//    For now this view doesn't update when new members are added to/removed from a team
+
 const MembersPhotoList = ({ members, classes }) => (
     <div className={classes.MembersPhotoList}>
         {members.map((member) =>
