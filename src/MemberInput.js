@@ -38,6 +38,9 @@ const styles = () => ({
     },
     suggestionDropDown: {
         width: '320px',
+    },
+    memberInput: {
+        width: '200px'
     }
 });
 
@@ -59,7 +62,8 @@ function renderInput({InputProps, inputRef, classes, ...other}) {
             InputProps={{
                 inputRef: inputRef,
                 classes: {
-                    root: classes.memberList
+                    root: classes.memberList,
+                    input: classes.memberInput
                 },
                 ...InputProps,
             }}
@@ -73,6 +77,7 @@ function renderSuggestion({ suggestion, index, itemProps, highlightedIndex, memb
     const isSelected = (members || '').indexOf(suggestion.name) > -1;
 
     return (
+        // TODO: Make this lineup properly with the input dropDown.
         <MenuItem
             {...itemProps}
             key={suggestion.memberId}
