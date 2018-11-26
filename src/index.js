@@ -1,6 +1,12 @@
 import React from 'react';
+import { render } from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import TeamsPage from "./TeamsPage";
 
+const rootElement = document.querySelector('#root');
+if (rootElement) {
+    render(<TeamsPage />, rootElement);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
