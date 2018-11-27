@@ -57,3 +57,5 @@ export const Teams = [
     createTeam('Support Level 1',  Members.slice(0, 10), "1 Year Ago"),
     createTeam('Support Level 2',  Members.slice(0, 4),  "2 Year Ago"),
 ];
+
+export const LoremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.";
