@@ -39,6 +39,8 @@ const styles = () => ({
     },
     suggestionDropDown: {
         width: '320px',
+        maxHeight: '305px',
+        overflow: 'scroll',
     },
     memberInput: {
         width: '200px',
