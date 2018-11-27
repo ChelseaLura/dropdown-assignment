@@ -20,6 +20,7 @@ const styles = () => ({
 const MembersPhotoList = ({ members, classes }) => (
     <div className={classes.MembersPhotoList}>
         {members.map((member) =>
+            // TODO: Display photos overlapping eachother
             <Avatar key={member.memberId}
                     alt={member.name}
                     src={member.photo}

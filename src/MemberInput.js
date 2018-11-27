@@ -3,6 +3,7 @@ import keycode from 'keycode';
 import Downshift from 'downshift';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import ClearIcon from '@material-ui/icons/Clear';
 import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper'
 import Chip from '@material-ui/core/Chip';
@@ -41,17 +42,31 @@ const styles = () => ({
     },
     memberInput: {
         width: '200px',
-        fontFamily: 'Source Sans Pro'
+        fontFamily: 'Source Sans Pro',
+        color: '#417505'
     }
 });
 
 const MemberChip = withStyles({
     root: {
         margin: '4px 8px 4px 0',
-        fontFamily: 'Source Sans Pro'
+        fontFamily: 'Source Sans Pro',
+        backgroundColor: '#ffffff',
+        border: '1px solid rgba(41, 65, 86, 0.1)',
+        boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.08)'
     },
     label: {
         padding: '0 14px 0 4px'
+    },
+    deleteIcon: {
+        color: '#777777',
+        height: '15px',
+        fontSize: '15px',
+        borderRadius: '50%',
+        '&:hover': {
+            backgroundColor: '#777777',
+            color: '#ffffff'
+        }
     }
 })(Chip);
 
@@ -175,6 +190,7 @@ class MemberInput extends React.Component {
                                     <MemberChip key={member.memberId}
                                                 avatar={<Avatar className={classes.memberAvatar} src={member.photo}/>}
                                                 label={member.name}
+                                                deleteIcon={<ClearIcon />}
                                                 onDelete={this.handleDelete(member)}
                                     />
                                 )),
