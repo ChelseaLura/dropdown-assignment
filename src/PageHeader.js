@@ -10,8 +10,11 @@ const styles = () => ({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingLeft: '24px',
-        marginBottom: '20px'
+        margin: '20px 0'
     },
+    headerText: {
+        color: '#777777'
+    }
 });
 
 const HeaderButton = withStyles({
@@ -35,7 +38,7 @@ const HeaderButton = withStyles({
 
 const PageHeader = ({classes}) => (
         <header className={classes.header}>
-            <span>{ LoremIpsum }</span>
+            <span className={classes.headerText}>{ LoremIpsum }</span>
             <HeaderButton>Create Team</HeaderButton>
         </header>
 );
