@@ -9,7 +9,8 @@ const styles = () => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingLeft: '24px'
+        paddingLeft: '24px',
+        marginBottom: '20px'
     },
 });
 
