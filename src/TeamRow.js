@@ -41,9 +41,10 @@ const styles = () => ({
         flexDirection: 'row',
         paddingTop: '8px'
     },
-    flexColumn: {
+    teamDetails: {
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: 'rgba(65, 117, 5, .05)',
     },
     archiveIcon: {
         fontSize: '14px',
@@ -62,8 +63,7 @@ const TeamSummary = withStyles({
         margin: 0
     },
     expandIcon: {
-        color: '#417505',
-        opacity: 0.1,
+        color: 'rgba(65, 117, 5, .1)',
         height: '30px',
         width: '30px',
 
@@ -87,7 +87,7 @@ const TeamRow = ({team, classes}) => (
             </div>
             <div className={classes.added}>{team.added}</div>
         </TeamSummary>
-        <TeamEditDetails className={classes.flexColumn}>
+        <TeamEditDetails className={classes.teamDetails}>
             <div className={classes.flexRow}>
                 <div className={classes.membersSection}>Team Members: </div>
                 <div>Actions: </div>
