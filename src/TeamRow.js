@@ -14,13 +14,9 @@ const styles = () => ({
         width: '100%',
         border: 0
     },
-    teamRow: {
-        margin: 0,
-        padding: '8px 0',
-        boxShadow: 'none',
-        borderBottom: '1px solid #ededed',
-    },
     name: {
+        fontWeight: '600',
+        fontSize: '16px',
         flexBasis: TeamSectionStyles.nameFlexBasis,
     },
     member: {
@@ -44,7 +40,6 @@ const styles = () => ({
     teamDetails: {
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'rgba(65, 117, 5, .05)',
     },
     archiveIcon: {
         fontSize: '14px',
@@ -66,20 +61,38 @@ const TeamSummary = withStyles({
         color: 'rgba(65, 117, 5, .1)',
         height: '30px',
         width: '30px',
-
+    },
+    expanded: {
+        margin: 0,
     }
 })(ExpansionPanelSummary);
 
 const TeamEditDetails = withStyles({
     root: {
-        padding: '0px 24px',
+        padding: '0px 24px 10px 24px',
         fontSize: '12px',
         color: '#9b9b9b'
     },
 })(ExpansionPanelDetails);
 
+const TeamPanel = withStyles({
+    root: {
+        margin: 0,
+        padding: '8px 0',
+        boxShadow: 'none',
+        borderBottom: '1px solid #ededed',
+    },
+    expanded: {
+        backgroundColor: 'rgba(65, 117, 5, .05)',
+        color: '#417505',
+        padding: 0,
+        margin: 0,
+    }
+
+})(ExpansionPanel);
+
 const TeamRow = ({team, classes}) => (
-    <ExpansionPanel className={classes.teamRow}>
+    <TeamPanel>
         <TeamSummary expandIcon={<Icon className={'fa fa-chevron-circle-up'} />}>
             <div className={classes.name}>{team.name}</div>
             <div className={classes.member}>
@@ -100,7 +113,7 @@ const TeamRow = ({team, classes}) => (
                 </div>
             </div>
         </TeamEditDetails>
-    </ExpansionPanel>
+    </TeamPanel>
 
 );
 
