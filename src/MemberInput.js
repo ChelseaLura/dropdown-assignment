@@ -40,13 +40,15 @@ const styles = () => ({
         width: '320px',
     },
     memberInput: {
-        width: '200px'
+        width: '200px',
+        fontFamily: 'Source Sans Pro'
     }
 });
 
 const MemberChip = withStyles({
     root: {
         margin: '4px 8px 4px 0',
+        fontFamily: 'Source Sans Pro'
     },
     label: {
         padding: '0 14px 0 4px'
